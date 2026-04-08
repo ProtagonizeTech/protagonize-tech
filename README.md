@@ -1,93 +1,121 @@
-DESAFIO TÉCNICO – BOOTCAMP WEB FRONT (ANGULAR + ASP.NET)
-Objetivo
-Desenvolver uma aplicação web simples para cadastro e gerenciamento de tarefas,
-utilizando Angular no front-end, ASP.NET Core Web API no back-end e SQL
-Server como banco de dados.
-O objetivo do desafio é avaliar conhecimentos básicos de desenvolvimento web,
-integração front-end e back-end, e lógica de programação, considerando um nível
-júnior.
+# Desafio Tecnico - Gerenciador de Tarefas
 
-Tecnologias obrigatórias
- Front-end: Angular
- Back-end: ASP.NET Core Web API (C#)
- Banco de dados: SQL Server
- ORM: Entity Framework Core
- Comunicação: API REST (JSON)
+Aplicacao full stack para cadastro e gerenciamento de tarefas com:
 
-Escopo do Projeto
-Entidade principal: Tarefa
-A aplicação deverá trabalhar com a entidade Tarefa, contendo os seguintes campos:
-Campo Tipo
-Id int (gerado
-automaticamente)
+- Angular no front-end
+- ASP.NET Core Web API no back-end
+- SQL Server como banco de dados
+- Entity Framework Core para persistencia
 
-Título string
-Descrição string
-Status string (Pendente /
-Concluída)
+## Estrutura do projeto
 
-Data de
-Criação DateTime
+```text
+PROTAGONIZE/
+|-- backend/TaskManager.Api
+|-- frontend
+|-- PROTAGONIZE.sln
+```
 
-Funcionalidades obrigatórias
-Back-end (API)
- Criar uma API REST para gerenciar tarefas
- Implementar os seguintes endpoints:
-o GET – Listar todas as tarefas
+## Funcionalidades
 
-o GET/{id} – Buscar tarefa por ID
-o POST – Criar nova tarefa
-o PUT/{id} – Atualizar uma tarefa
-o DELETE/{id} – Excluir uma tarefa
- Persistir os dados no SQL Server
- Utilizar Entity Framework Core
+- Listar tarefas
+- Buscar tarefa por ID
+- Criar tarefa
+- Editar tarefa
+- Excluir tarefa
+- Filtrar tarefas por status
+- Validacao basica no formulario
+- Mensagens simples de sucesso e erro
 
-Front-end (Angular)
- Tela para listar tarefas
- Tela/formulário para criar tarefa
- Possibilidade de editar tarefa
- Possibilidade de excluir tarefa
- Consumo da API utilizando HttpClient
- Organização básica em componentes e services
+## Pre-requisitos
 
-Requisitos não obrigatórios (opcionais)
-(Não eliminam se não forem feitos)
- Validação simples de formulário
- Mensagens de sucesso ou erro
- Filtro de tarefas por status
- Layout simples (não será avaliado design avançado)
+- .NET SDK 8.0 ou superior
+- SQL Server
+- Node.js 20+ ou 22+
 
-Critérios de Avaliação
-Os candidatos serão avaliados com base nos seguintes critérios:
-Obrigatórios
- Funcionamento correto do CRUD
- Comunicação entre Angular e API
- Organização básica do código
- Uso correto de HTTP (GET, POST, PUT, DELETE)
- Projeto compila e executa corretamente
+## Back-end com dotnet CLI
 
-Diferenciais (não obrigatórios)
+1. Ajuste a connection string em `backend/TaskManager.Api/appsettings.json` se necessario.
+2. Na raiz do repositorio, restaure a solucao:
 
- Código limpo e bem organizado
- Validações básicas
- Tratamento simples de erros
- README explicando como rodar o projeto
- Commits organizados no Git
+```powershell
+dotnet restore PROTAGONIZE.sln
+```
 
-O que não será avaliado
- Design avançado
- Autenticação / login
- Arquitetura complexa
- Padrões avançados (DDD, CQRS, etc.)
+3. Restaure a ferramenta local do Entity Framework:
 
-Carga horária estimada
-80 horas, distribuídas entre:
- Planejamento
- Desenvolvimento back-end
- Desenvolvimento front-end
- Integração
- Ajustes finais
+```powershell
+dotnet tool restore
+```
 
-Entrega
- Código-fonte em repositório Git (GitHub, GitLab ou similar)
- README com instruções para execução do projeto
+4. Gere o banco aplicando as migrations:
+
+```powershell
+dotnet ef database update --project backend/TaskManager.Api --startup-project backend/TaskManager.Api
+```
+
+5. Compile a solucao:
+
+```powershell
+dotnet build PROTAGONIZE.sln
+```
+
+6. Execute a API:
+
+```powershell
+dotnet run --project backend/TaskManager.Api
+```
+
+Em ambiente de desenvolvimento, a API sobe com Swagger em `https://localhost:5001/swagger` e tambem tenta aplicar as migrations automaticamente na inicializacao.
+
+## Front-end
+
+1. Entre na pasta do front-end:
+
+```powershell
+cd frontend
+```
+
+2. Instale as dependencias:
+
+```powershell
+npm install
+```
+
+3. Rode a aplicacao Angular:
+
+```powershell
+npm start
+```
+
+4. Acesse:
+
+```text
+http://localhost:4200
+```
+
+## Observacoes importantes
+
+- O servico Angular aponta para `https://localhost:5001/api/tarefas`.
+- Se a porta da API mudar, ajuste essa URL em `frontend/src/app/services/tarefa.service.ts`.
+- O status aceito pela API e `Pendente` ou `Concluida`.
+- O campo `DataCriacao` e definido automaticamente no back-end.
+
+## Endpoints da API
+
+- `GET /api/tarefas`
+- `GET /api/tarefas/{id}`
+- `POST /api/tarefas`
+- `PUT /api/tarefas/{id}`
+- `DELETE /api/tarefas/{id}`
+
+## Exemplo de payload
+
+```json
+{
+  "id": 0,
+  "titulo": "Estudar ASP.NET Core",
+  "descricao": "Implementar o CRUD de tarefas",
+  "status": "Pendente"
+}
+```
