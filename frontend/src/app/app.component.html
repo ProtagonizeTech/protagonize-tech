@@ -1,0 +1,83 @@
+<main class="page">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Bootcamp Web Front</p>
+      <h1>Gerenciador de Tarefas</h1>
+      <p class="subtitle">CRUD completo com Angular consumindo uma API ASP.NET Core.</p>
+    </div>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <div class="card-header">
+        <h2>{{ editandoId ? 'Editar tarefa' : 'Nova tarefa' }}</h2>
+        <button *ngIf="editandoId" type="button" class="ghost" (click)="cancelarEdicao()">
+          Cancelar
+        </button>
+      </div>
+
+      <form [formGroup]="formulario" (ngSubmit)="salvar()" class="form">
+        <label>
+          Título
+          <input type="text" formControlName="titulo" placeholder="Ex.: Estudar Angular" />
+        </label>
+        <small class="error" *ngIf="formulario.controls.titulo.touched && formulario.controls.titulo.invalid">
+          Informe um título com até 120 caracteres.
+        </small>
+
+        <label>
+          Descrição
+          <textarea rows="4" formControlName="descricao" placeholder="Detalhes da tarefa"></textarea>
+        </label>
+
+        <label>
+          Status
+          <select formControlName="status">
+            <option value="Pendente">Pendente</option>
+            <option value="Concluida">Concluída</option>
+          </select>
+        </label>
+
+        <button type="submit" [disabled]="salvando">
+          {{ salvando ? 'Salvando...' : editandoId ? 'Atualizar tarefa' : 'Criar tarefa' }}
+        </button>
+      </form>
+    </article>
+
+    <article class="card">
+      <div class="card-header">
+        <h2>Tarefas cadastradas</h2>
+        <select [(ngModel)]="filtroStatus" [ngModelOptions]="{ standalone: true }" class="filter">
+          <option value="Todos">Todas</option>
+          <option value="Pendente">Pendentes</option>
+          <option value="Concluida">Concluídas</option>
+        </select>
+      </div>
+
+      <p class="feedback success" *ngIf="mensagem">{{ mensagem }}</p>
+      <p class="feedback error" *ngIf="erro">{{ erro }}</p>
+      <p *ngIf="carregando">Carregando tarefas...</p>
+      <p *ngIf="!carregando && !tarefasFiltradas.length" class="empty">
+        Nenhuma tarefa encontrada para o filtro selecionado.
+      </p>
+
+      <div class="task-list" *ngIf="!carregando && tarefasFiltradas.length">
+        <article class="task-item" *ngFor="let tarefa of tarefasFiltradas">
+          <div class="task-content">
+            <div class="task-top">
+              <h3>{{ tarefa.titulo }}</h3>
+              <span class="badge" [class.done]="tarefa.status === 'Concluida'">{{ tarefa.status }}</span>
+            </div>
+            <p>{{ tarefa.descricao || 'Sem descrição.' }}</p>
+            <small>Criada em {{ tarefa.dataCriacao | date: 'dd/MM/yyyy HH:mm' }}</small>
+          </div>
+
+          <div class="task-actions">
+            <button type="button" class="ghost" (click)="editar(tarefa)">Editar</button>
+            <button type="button" class="danger" (click)="excluir(tarefa)">Excluir</button>
+          </div>
+        </article>
+      </div>
+    </article>
+  </section>
+</main>

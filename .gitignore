@@ -1,0 +1,11 @@
+bin/
+obj/
+.vs/
+.vscode/
+
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+
+backend/**/bin/
+backend/**/obj/
