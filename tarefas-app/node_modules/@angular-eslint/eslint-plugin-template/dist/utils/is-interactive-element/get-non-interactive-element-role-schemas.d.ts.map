@@ -1,1 +1,0 @@
-{"version":3,"file":"get-non-interactive-element-role-schemas.d.ts","sourceRoot":"","sources":["../../../src/utils/is-interactive-element/get-non-interactive-element-role-schemas.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EACV,qBAAqB,EACrB,uBAAuB,EACxB,MAAM,YAAY,CAAC;AAWpB,wBAAgB,mCAAmC,IAAI,uBAAuB,EAAE,CAgB/E;AAED,wBAAgB,sBAAsB,IAAI,GAAG,CAAC,qBAAqB,CAAC,CAyBnE"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"no-negated-async.d.ts","sourceRoot":"","sources":["../../src/rules/no-negated-async.ts"],"names":[],"mappings":"AAKA,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AACzB,MAAM,MAAM,UAAU,GAClB,gBAAgB,GAChB,wBAAwB,GACxB,wBAAwB,GACxB,uBAAuB,GACvB,4BAA4B,GAC5B,6BAA6B,CAAC;AAClC,eAAO,MAAM,SAAS,qBAAqB,CAAC;;AAE5C,wBAmFG;AAEH,eAAO,MAAM,mBAAmB;;CAE/B,CAAC"}

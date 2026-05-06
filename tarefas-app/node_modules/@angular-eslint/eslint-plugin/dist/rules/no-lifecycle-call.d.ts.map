@@ -1,1 +1,0 @@
-{"version":3,"file":"no-lifecycle-call.d.ts","sourceRoot":"","sources":["../../src/rules/no-lifecycle-call.ts"],"names":[],"mappings":"AAKA,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AACzB,MAAM,MAAM,UAAU,GAAG,iBAAiB,CAAC;AAC3C,eAAO,MAAM,SAAS,sBAAsB,CAAC;;AAE7C,wBAwCG;AAsBH,eAAO,MAAM,mBAAmB;;CAE/B,CAAC"}

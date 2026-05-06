@@ -1,1 +1,0 @@
-{"version":3,"file":"prefer-control-flow.d.ts","sourceRoot":"","sources":["../../src/rules/prefer-control-flow.ts"],"names":[],"mappings":"AAIA,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AACzB,MAAM,MAAM,UAAU,GAAG,mBAAmB,CAAC;AAC7C,eAAO,MAAM,SAAS,wBAAwB,CAAC;;AAE/C,wBAgCG;AAEH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"pipe-prefix.d.ts","sourceRoot":"","sources":["../../src/rules/pipe-prefix.ts"],"names":[],"mappings":"AASA,MAAM,MAAM,OAAO,GAAG;IACpB;QACE,QAAQ,EAAE,MAAM,EAAE,CAAC;KACpB;CACF,CAAC;AACF,MAAM,MAAM,UAAU,GAAG,YAAY,GAAG,4BAA4B,CAAC;AACrE,eAAO,MAAM,SAAS,gBAAgB,CAAC;;AAEvC,wBAoGG;AAEH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

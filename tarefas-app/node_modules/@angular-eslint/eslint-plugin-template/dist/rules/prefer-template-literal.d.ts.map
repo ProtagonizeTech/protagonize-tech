@@ -1,1 +1,0 @@
-{"version":3,"file":"prefer-template-literal.d.ts","sourceRoot":"","sources":["../../src/rules/prefer-template-literal.ts"],"names":[],"mappings":"AAeA,QAAA,MAAM,SAAS,0BAA0B,CAAC;AAE1C,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AACzB,MAAM,MAAM,UAAU,GAAG,OAAO,SAAS,CAAC;AAC1C,eAAO,MAAM,SAAS,4BAA4B,CAAC;;AA0FnD,wBA+IG;AAEH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

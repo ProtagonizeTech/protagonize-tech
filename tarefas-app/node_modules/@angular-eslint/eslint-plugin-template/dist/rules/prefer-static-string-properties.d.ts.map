@@ -1,1 +1,0 @@
-{"version":3,"file":"prefer-static-string-properties.d.ts","sourceRoot":"","sources":["../../src/rules/prefer-static-string-properties.ts"],"names":[],"mappings":"AAQA,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AACzB,MAAM,MAAM,UAAU,GAAG,8BAA8B,CAAC;AACxD,eAAO,MAAM,SAAS,oCAAoC,CAAC;;AAE3D,wBA0DG;AAEH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

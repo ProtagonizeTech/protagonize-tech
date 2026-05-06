@@ -1,1 +1,0 @@
-{"version":3,"file":"no-empty-control-flow.d.ts","sourceRoot":"","sources":["../../src/rules/no-empty-control-flow.ts"],"names":[],"mappings":"AAYA,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AACzB,MAAM,MAAM,UAAU,GAAG,oBAAoB,CAAC;AAC9C,eAAO,MAAM,SAAS,0BAA0B,CAAC;;AAEjD,wBA0EG;AAEH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

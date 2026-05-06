@@ -1,1 +1,0 @@
-{"version":3,"file":"no-positive-tabindex.d.ts","sourceRoot":"","sources":["../../src/rules/no-positive-tabindex.ts"],"names":[],"mappings":"AAUA,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AACzB,MAAM,MAAM,UAAU,GAAG,oBAAoB,GAAG,4BAA4B,CAAC;AAC7E,eAAO,MAAM,SAAS,yBAAyB,CAAC;;AAEhD,wBAkDG;AAEH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

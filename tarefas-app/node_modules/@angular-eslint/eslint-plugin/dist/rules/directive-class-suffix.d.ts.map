@@ -1,1 +1,0 @@
-{"version":3,"file":"directive-class-suffix.d.ts","sourceRoot":"","sources":["../../src/rules/directive-class-suffix.ts"],"names":[],"mappings":"AAQA,MAAM,MAAM,OAAO,GAAG,CAAC;IAAE,QAAQ,CAAC,QAAQ,EAAE,SAAS,MAAM,EAAE,CAAA;CAAE,CAAC,CAAC;AACjE,MAAM,MAAM,UAAU,GAAG,sBAAsB,CAAC;AAChD,eAAO,MAAM,SAAS,2BAA2B,CAAC;;AAIlD,wBA4DG;AAEH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

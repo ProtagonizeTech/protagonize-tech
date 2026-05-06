@@ -1,1 +1,0 @@
-{"version":3,"file":"mouse-events-have-key-events.d.ts","sourceRoot":"","sources":["../../src/rules/mouse-events-have-key-events.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,0BAA0B,CAAC;AAKzD,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AACzB,MAAM,MAAM,UAAU,GAAG,0BAA0B,CAAC;AACpD,eAAO,MAAM,SAAS,iCAAiC,CAAC;;AAaxD,wBAuCG;AAEH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"is-semantic-role-element.d.ts","sourceRoot":"","sources":["../../src/utils/is-semantic-role-element.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EACV,qBAAqB,EACrB,oBAAoB,EACrB,MAAM,0CAA0C,CAAC;AAalD,wBAAgB,qBAAqB,CACnC,OAAO,EAAE,MAAM,EACf,IAAI,EAAE,MAAM,EACZ,iBAAiB,EAAE,CAAC,oBAAoB,GAAG,qBAAqB,CAAC,EAAE,GAClE,OAAO,CA6BT"}

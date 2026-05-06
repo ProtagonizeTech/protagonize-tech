@@ -3572,11 +3572,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nyloo\\OneDrive\\Documentos\\WellDoc\\protagonize-tech\\TarefasAPI\\TarefasAPI.csproj",
+      "projectUniqueName": "C:\\Users\\nyloo\\Downloads\\AVANADE\\protagonize-tech\\TarefasAPI\\TarefasAPI.csproj",
       "projectName": "TarefasAPI",
-      "projectPath": "C:\\Users\\nyloo\\OneDrive\\Documentos\\WellDoc\\protagonize-tech\\TarefasAPI\\TarefasAPI.csproj",
+      "projectPath": "C:\\Users\\nyloo\\Downloads\\AVANADE\\protagonize-tech\\TarefasAPI\\TarefasAPI.csproj",
       "packagesPath": "C:\\Users\\nyloo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nyloo\\OneDrive\\Documentos\\WellDoc\\protagonize-tech\\TarefasAPI\\obj\\",
+      "outputPath": "C:\\Users\\nyloo\\Downloads\\AVANADE\\protagonize-tech\\TarefasAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nyloo\\AppData\\Roaming\\NuGet\\NuGet.Config"
