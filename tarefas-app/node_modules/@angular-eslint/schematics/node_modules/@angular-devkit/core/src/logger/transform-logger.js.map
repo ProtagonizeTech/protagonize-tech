@@ -1,0 +1,1 @@
+{"version":3,"file":"transform-logger.js","sourceRoot":"","sources":["transform-logger.ts"],"names":[],"mappings":";AAAA;;;;;;GAMG;;;AAGH,qCAA4C;AAE5C,MAAa,eAAgB,SAAQ,eAAM;IACzC,YACE,IAAY,EACZ,SAAiE,EACjE,SAAwB,IAAI;QAE5B,KAAK,CAAC,IAAI,EAAE,MAAM,CAAC,CAAC;QACpB,IAAI,CAAC,WAAW,GAAG,SAAS,CAAC,IAAI,CAAC,WAAW,CAAC,CAAC;IACjD,CAAC;CACF;AATD,0CASC"}

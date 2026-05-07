@@ -1,0 +1,1 @@
+{"version":3,"file":"component-class-suffix.d.ts","sourceRoot":"","sources":["../../src/rules/component-class-suffix.ts"],"names":[],"mappings":"AAQA,MAAM,MAAM,OAAO,GAAG;IACpB;QACE,QAAQ,EAAE,MAAM,EAAE,CAAC;KACpB;CACF,CAAC;AACF,MAAM,MAAM,UAAU,GAAG,sBAAsB,CAAC;AAChD,eAAO,MAAM,SAAS,2BAA2B,CAAC;;AAElD,wBAiDG;AAEH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

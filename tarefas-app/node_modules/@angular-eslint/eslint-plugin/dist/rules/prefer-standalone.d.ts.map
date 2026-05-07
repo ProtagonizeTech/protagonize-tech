@@ -1,0 +1,1 @@
+{"version":3,"file":"prefer-standalone.d.ts","sourceRoot":"","sources":["../../src/rules/prefer-standalone.ts"],"names":[],"mappings":"AAIA,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AAEzB,MAAM,MAAM,UAAU,GAAG,kBAAkB,GAAG,uBAAuB,CAAC;AACtE,eAAO,MAAM,SAAS,sBAAsB,CAAC;;AAK7C,wBAkEG;AAEH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

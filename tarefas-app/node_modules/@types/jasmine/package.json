@@ -1,0 +1,81 @@
+{
+    "name": "@types/jasmine",
+    "version": "5.1.15",
+    "description": "TypeScript definitions for jasmine",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/jasmine",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Boris Yankov",
+            "githubUsername": "borisyankov",
+            "url": "https://github.com/borisyankov"
+        },
+        {
+            "name": "Theodore Brown",
+            "githubUsername": "theodorejb",
+            "url": "https://github.com/theodorejb"
+        },
+        {
+            "name": "Lukas Zech",
+            "githubUsername": "lukas-zech-software",
+            "url": "https://github.com/lukas-zech-software"
+        },
+        {
+            "name": "Boris Breuer",
+            "githubUsername": "Engineer2B",
+            "url": "https://github.com/Engineer2B"
+        },
+        {
+            "name": "Giles Roadnight",
+            "githubUsername": "Roaders",
+            "url": "https://github.com/Roaders"
+        },
+        {
+            "name": "Domas Trijonis",
+            "githubUsername": "fdim",
+            "url": "https://github.com/fdim"
+        },
+        {
+            "name": "Moshe Kolodny",
+            "githubUsername": "kolodny",
+            "url": "https://github.com/kolodny"
+        },
+        {
+            "name": "Stephen Farrar",
+            "githubUsername": "stephenfarrar",
+            "url": "https://github.com/stephenfarrar"
+        },
+        {
+            "name": "Dominik Ehrenberg",
+            "githubUsername": "djungowski",
+            "url": "https://github.com/djungowski"
+        },
+        {
+            "name": "Chives",
+            "githubUsername": "chivesrs",
+            "url": "https://github.com/chivesrs"
+        },
+        {
+            "name": "kirjs",
+            "githubUsername": "kirjs",
+            "url": "https://github.com/kirjs"
+        },
+        {
+            "name": "Dmitry Semigradsky",
+            "githubUsername": "Semigradsky",
+            "url": "https://github.com/Semigradsky"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/jasmine"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "peerDependencies": {},
+    "typesPublisherContentHash": "9a4080a81f3528bb8c9a73aaa2b83b81efbab65605d2aa080412d2a52903bb07",
+    "typeScriptVersion": "5.2"
+}

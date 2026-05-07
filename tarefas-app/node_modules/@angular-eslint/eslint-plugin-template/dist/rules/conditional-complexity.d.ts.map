@@ -1,0 +1,1 @@
+{"version":3,"file":"conditional-complexity.d.ts","sourceRoot":"","sources":["../../src/rules/conditional-complexity.ts"],"names":[],"mappings":"AAiBA,MAAM,MAAM,OAAO,GAAG,CAAC;IAAE,aAAa,EAAE,MAAM,CAAA;CAAE,CAAC,CAAC;AAClD,MAAM,MAAM,UAAU,GAAG,uBAAuB,CAAC;AACjD,eAAO,MAAM,SAAS,2BAA2B,CAAC;;AAIlD,wBAsFG;AA6DH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

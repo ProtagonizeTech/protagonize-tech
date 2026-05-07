@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/add-eslint-to-project/index.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,IAAI,EAAQ,MAAM,4BAA4B,CAAC;AAQ7D,UAAU,MAAM;IACd,OAAO,CAAC,EAAE,MAAM,CAAC;IACjB,uBAAuB,CAAC,EAAE,OAAO,CAAC;CACnC;AAED,MAAM,CAAC,OAAO,UAAU,kBAAkB,CAAC,MAAM,EAAE,MAAM,GAAG,IAAI,CAuB/D"}

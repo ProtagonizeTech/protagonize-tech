@@ -1,0 +1,1 @@
+{"version":3,"file":"no-pipe-impure.d.ts","sourceRoot":"","sources":["../../src/rules/no-pipe-impure.ts"],"names":[],"mappings":"AAIA,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AACzB,MAAM,MAAM,UAAU,GAAG,cAAc,GAAG,yBAAyB,CAAC;AACpE,eAAO,MAAM,SAAS,mBAAmB,CAAC;;AAE1C,wBAuCG;AAEH,eAAO,MAAM,mBAAmB;;CAE/B,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"no-uncalled-signals.d.ts","sourceRoot":"","sources":["../../src/rules/no-uncalled-signals.ts"],"names":[],"mappings":"AAAA,OAAO,EAEL,WAAW,EAGZ,MAAM,0BAA0B,CAAC;AAIlC,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AACzB,MAAM,MAAM,UAAU,GAAG,mBAAmB,GAAG,mBAAmB,CAAC;AACnE,eAAO,MAAM,SAAS,wBAAwB,CAAC;;AAW/C,wBAwEG;AAEH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"no-input-rename.d.ts","sourceRoot":"","sources":["../../src/rules/no-input-rename.ts"],"names":[],"mappings":"AAYA,MAAM,MAAM,OAAO,GAAG,CAAC;IAAE,QAAQ,CAAC,YAAY,CAAC,EAAE,SAAS,MAAM,EAAE,CAAA;CAAE,CAAC,CAAC;AACtE,MAAM,MAAM,UAAU,GAClB,eAAe,GACf,wBAAwB,GACxB,yCAAyC,CAAC;AAC9C,eAAO,MAAM,SAAS,oBAAoB,CAAC;;AAI3C,wBAgQG;AAqBH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

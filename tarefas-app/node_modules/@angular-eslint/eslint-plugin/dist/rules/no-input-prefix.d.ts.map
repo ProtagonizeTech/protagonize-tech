@@ -1,0 +1,1 @@
+{"version":3,"file":"no-input-prefix.d.ts","sourceRoot":"","sources":["../../src/rules/no-input-prefix.ts"],"names":[],"mappings":"AAQA,MAAM,MAAM,OAAO,GAAG,CAAC;IAAE,QAAQ,CAAC,QAAQ,EAAE,SAAS,MAAM,EAAE,CAAA;CAAE,CAAC,CAAC;AACjE,MAAM,MAAM,UAAU,GAAG,eAAe,CAAC;AACzC,eAAO,MAAM,SAAS,oBAAoB,CAAC;;AAE3C,wBAwIG;AAWH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

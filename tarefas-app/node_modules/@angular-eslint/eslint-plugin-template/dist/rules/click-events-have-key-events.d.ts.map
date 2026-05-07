@@ -1,0 +1,1 @@
+{"version":3,"file":"click-events-have-key-events.d.ts","sourceRoot":"","sources":["../../src/rules/click-events-have-key-events.ts"],"names":[],"mappings":"AAUA,MAAM,MAAM,OAAO,GAAG;IACpB;QACE,QAAQ,CAAC,oBAAoB,CAAC,EAAE,MAAM,EAAE,CAAC;KAC1C;CACF,CAAC;AACF,MAAM,MAAM,UAAU,GAAG,0BAA0B,CAAC;AACpD,eAAO,MAAM,SAAS,iCAAiC,CAAC;;AAKxD,wBA+EG;AAsBH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

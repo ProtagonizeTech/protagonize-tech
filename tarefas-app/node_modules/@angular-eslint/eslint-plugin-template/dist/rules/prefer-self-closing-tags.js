@@ -1,0 +1,171 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RULE_DOCS_EXTENSION = exports.RULE_NAME = void 0;
+const bundled_angular_compiler_1 = require("@angular-eslint/bundled-angular-compiler");
+const utils_1 = require("@angular-eslint/utils");
+const create_eslint_rule_1 = require("../utils/create-eslint-rule");
+const get_dom_elements_1 = require("../utils/get-dom-elements");
+exports.RULE_NAME = 'prefer-self-closing-tags';
+exports.default = (0, create_eslint_rule_1.createESLintRule)({
+    name: exports.RULE_NAME,
+    meta: {
+        type: 'layout',
+        docs: {
+            description: 'Ensures that self-closing tags are used for elements with a closing tag but no content.',
+        },
+        fixable: 'code',
+        schema: [],
+        messages: {
+            preferSelfClosingTags: 'Use self-closing tags for elements with a closing tag but no content.',
+        },
+    },
+    defaultOptions: [],
+    create(context) {
+        const parserServices = (0, utils_1.getTemplateParserServices)(context);
+        // angular 18 doesn't support self closing tags in index.html
+        if (/src[\\/]index\.html$/.test(context.physicalFilename)) {
+            // If it is, return an empty object to skip this rule
+            return {};
+        }
+        return {
+            'Element, Template, Content'(node) {
+                if (isContentNode(node)) {
+                    processContentNode(node);
+                }
+                else {
+                    // Ignore native elements.
+                    if ('name' in node && (0, get_dom_elements_1.getDomElements)().has(node.name.toLowerCase())) {
+                        return;
+                    }
+                    processElementOrTemplateNode(node);
+                }
+            },
+        };
+        function processElementOrTemplateNode(node) {
+            const { children, startSourceSpan, endSourceSpan } = node;
+            if (!endSourceSpan ||
+                (startSourceSpan.start.offset === endSourceSpan.start.offset &&
+                    startSourceSpan.end.offset === endSourceSpan.end.offset)) {
+                // No close tag.
+                return;
+            }
+            const someChildNodesHaveContent = children.some((node) => {
+                // If the node is only whitespace, we can consider it empty.
+                //
+                // We need to look at the text from the source code, rather
+                // than the `TmplAstText.value` property. The `value` property
+                // contains the HTML-decoded value, so if the raw text contains
+                // `&nbsp;`, that is decoded to a space, but we don't want to
+                // treat that as empty text.
+                return (!(node instanceof bundled_angular_compiler_1.TmplAstText) ||
+                    context.sourceCode.text
+                        .slice(node.sourceSpan.start.offset, node.sourceSpan.end.offset)
+                        .trim() !== '');
+            });
+            // If the element only contains whitespace, we can consider it
+            // empty.
+            //
+            // If the node only contains comments, those comments
+            // will not appear in the syntax tree, which results in the
+            // content appearing empty.
+            //
+            // So instead of using the syntax tree, we'll look at the
+            // source code and get the text that appears between the
+            // start element and the end element.
+            const nodeHasContent = context.sourceCode.text
+                .slice(startSourceSpan.end.offset, endSourceSpan.start.offset)
+                .trim() !== '';
+            if (nodeHasContent || someChildNodesHaveContent) {
+                // The element has content.
+                return;
+            }
+            // HTML tags always have more than two characters
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            const openingTagLastChar = startSourceSpan.toString().at(-2);
+            const closingTagPrefix = getClosingTagPrefix(openingTagLastChar);
+            context.report({
+                loc: parserServices.convertNodeSourceSpanToLoc(endSourceSpan),
+                messageId: 'preferSelfClosingTags',
+                fix: (fixer) => fixer.replaceTextRange([startSourceSpan.end.offset - 1, endSourceSpan.end.offset], closingTagPrefix + '/>'),
+            });
+        }
+        function processContentNode(node) {
+            const { sourceSpan } = node;
+            const ngContentCloseTag = '</ng-content>';
+            const source = sourceSpan.toString();
+            if (source.endsWith(ngContentCloseTag)) {
+                // Content nodes don't have information about `startSourceSpan`
+                // and `endSourceSpan`, so we need to calculate where the inner
+                // HTML is ourselves. We know that the source ends with
+                // "</ng-content>", so we know where inner HTML ends.
+                // We just need to find where the inner HTML starts.
+                const startOfInnerHTML = findStartOfNgContentInnerHTML(source);
+                // If the start of the inner HTML is also where the close tag starts,
+                // then there is no inner HTML and we can avoid slicing the string.
+                if (startOfInnerHTML < source.length - ngContentCloseTag.length) {
+                    if (source.slice(startOfInnerHTML, -ngContentCloseTag.length).trim()
+                        .length > 0) {
+                        return;
+                    }
+                }
+                // The source will always have at least "<ng-content"
+                // before the inner HTML, so two characters before
+                // the inner HTML will always be a valid index.
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                const openingTagLastChar = source.at(startOfInnerHTML - 2);
+                const closingTagPrefix = getClosingTagPrefix(openingTagLastChar);
+                context.report({
+                    loc: {
+                        start: {
+                            line: sourceSpan.end.line + 1,
+                            column: sourceSpan.end.col - ngContentCloseTag.length,
+                        },
+                        end: {
+                            line: sourceSpan.end.line + 1,
+                            column: sourceSpan.end.col,
+                        },
+                    },
+                    messageId: 'preferSelfClosingTags',
+                    fix: (fixer) => fixer.replaceTextRange([
+                        sourceSpan.start.offset + startOfInnerHTML - 1,
+                        sourceSpan.end.offset,
+                    ], closingTagPrefix + '/>'),
+                });
+            }
+        }
+    },
+});
+function isContentNode(node) {
+    return 'name' in node && node.name.toLowerCase() === 'ng-content';
+}
+function findStartOfNgContentInnerHTML(html) {
+    let quote;
+    // The HTML will always start with at least "<ng-content",
+    // so we can skip over that part and start at index 11.
+    for (let i = 11; i < html.length; i++) {
+        const char = html.at(i);
+        if (quote !== undefined) {
+            if (quote === char) {
+                quote = undefined;
+            }
+        }
+        else {
+            switch (char) {
+                case '>':
+                    return i + 1;
+                case '"':
+                case "'":
+                    quote = char;
+                    break;
+            }
+        }
+    }
+    return html.length;
+}
+function getClosingTagPrefix(openingTagLastChar) {
+    const hasOwnWhitespace = openingTagLastChar.trim() === '';
+    return hasOwnWhitespace ? '' : ' ';
+}
+exports.RULE_DOCS_EXTENSION = {
+    rationale: 'Self-closing tags like <app-component /> are more concise and eliminate visual clutter when elements have no content. This pattern is familiar from HTML void elements (like <img /> and <br />) and from JSX/React. Using self-closing syntax makes it immediately obvious that an element is empty, whereas <app-component></app-component> requires scanning to the closing tag to confirm there is no content. The shorter syntax also reduces the chance of accidentally nesting content where none was intended. Angular v15.1+ supports self-closing tags for components and structural elements. The rule automatically skips native HTML elements (div, span, etc.) and index.html files since browser support varies. For Angular components and directives, self-closing tags improve template readability.',
+};

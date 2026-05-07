@@ -1,0 +1,1 @@
+{"version":3,"file":"no-empty-lifecycle-method.d.ts","sourceRoot":"","sources":["../../src/rules/no-empty-lifecycle-method.ts"],"names":[],"mappings":"AAUA,MAAM,MAAM,OAAO,GAAG,EAAE,CAAC;AACzB,MAAM,MAAM,UAAU,GAClB,wBAAwB,GACxB,8BAA8B,CAAC;AACnC,eAAO,MAAM,SAAS,8BAA8B,CAAC;;AAErD,wBAsFG;AAYH,eAAO,MAAM,mBAAmB;;CAG/B,CAAC"}

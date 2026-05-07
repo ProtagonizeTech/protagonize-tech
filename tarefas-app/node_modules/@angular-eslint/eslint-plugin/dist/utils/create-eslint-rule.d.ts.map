@@ -1,0 +1,1 @@
+{"version":3,"file":"create-eslint-rule.d.ts","sourceRoot":"","sources":["../../src/utils/create-eslint-rule.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,0BAA0B,CAAC;AAEvD,MAAM,WAAW,QAAQ;IACvB,WAAW,CAAC,EAAE,MAAM,CAAC;CACtB;AA4BD,eAAO,MAAM,gBAAgB,uPAG5B,CAAC"}
